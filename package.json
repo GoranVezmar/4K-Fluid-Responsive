@@ -2,7 +2,7 @@
 	"name": "4k-fluid-responsive",
 	"displayName": "4K Fluid Responsive",
 	"description": "Turns pixels to vw",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"publisher" : "GoranVezmar",
 	"icon": "icon.png",
 	"repository": {
