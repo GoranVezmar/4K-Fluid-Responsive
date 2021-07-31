@@ -1,0 +1,63 @@
+{
+	"name": "4k-fluid-responsive",
+	"displayName": "4K Fluid Responsive",
+	"description": "Turns pixels to vw",
+	"version": "0.0.1",
+	"publisher" : "GoranVezmar",
+	"icon": "icon.png",
+	"repository": {
+        "type": "git",
+        "url": "https://github.com/GoranVezmar/4K-Fluid-Responsive.git"
+    },
+	"engines": {
+		"vscode": "^1.58.0"
+	},
+	"keywords": ["SCSS", "4K", "Responsive"],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:4k-fluid-responsive.ConvertToVWs"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "4k-fluid-responsive.ConvertToVWs",
+				"title": "Convert Pixels to VWs"
+			}
+		],
+		"configuration": {
+			"title": "4K Fluid Responsive",
+			"properties": {
+				"4k-fluid-responsive.designWidth": {
+					"type": "number",
+					"default": "1920",
+					"description": "Width of the desing. The devider of pixel value.",
+					"scope": "resource"
+				}
+			}
+		}
+	},
+	
+	"scripts": {
+		"lint": "eslint ."
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.58.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "14.x",
+		"eslint": "^7.27.0",
+		"glob": "^7.1.7",
+		"mocha": "^8.4.0",
+		"typescript": "^4.3.2",
+		"vscode-test": "^1.5.2"
+	},
+	"dependencies": {
+		"copy-paste": "^1.3.0",
+		"lodash": "^4.17.21",
+		"prettier": "^2.3.2",
+		"scss-parser": "^1.0.5"
+	}
+}
