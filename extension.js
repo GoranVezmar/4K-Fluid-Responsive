@@ -50,9 +50,11 @@ const formatDelaration = (declaration) => {
 		let newValue = [];
 		value.value.forEach((val, index) => {
 			let newVal = {...val};
-			if(val.type === 'number' && value.value[index + 1].value === 'px') {
-				const vwValue = (parseInt(val.value) / baseDesignWidth * 100).toFixed(5).toString()
-				newVal.value = vwValue;
+			if(value.value[index + 1]) {
+				if(val.type === 'number' && value.value[index + 1].value === 'px') {
+					const vwValue = (parseInt(val.value) / baseDesignWidth * 100).toFixed(5).toString()
+					newVal.value = vwValue;
+				}
 			}
 			if(val.type === 'identifier' && val.value === 'px') {
 				newVal.value = 'vw';
